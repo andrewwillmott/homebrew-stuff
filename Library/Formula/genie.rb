@@ -5,6 +5,11 @@ class Genie < Formula
   version "354"
   sha256 "d45a633b67666c95a714cb7c587ddc058b15bacf27fe86ece96a451d9dbf9661"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "14f493cee0349757a1b19cfe06a6af42b154fe42f6f233f63827031893f9d5a3" => :yosemite
+  end
+
   def install
     system "make"
     Dir.mkdir("#{bin}")
