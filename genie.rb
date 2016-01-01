@@ -7,8 +7,7 @@ class Genie < Formula
 
   def install
     system "make"
-    Dir.mkdir("#{bin}")
-    cp("bin/darwin/genie", "#{bin}/genie")
+    bin.install("bin/darwin/genie")
   end
 
   test do

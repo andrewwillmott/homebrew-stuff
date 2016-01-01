@@ -7,8 +7,7 @@ class DistOcc < Formula
 
   def install
     system "c++", "-D", "USE_TGA=1", "-D", "USE_OBJ=1", "DistanceOcclusionLib.cpp", "DistanceOcclusionTest.cpp", "MeshSupport.cpp", "targa.c", "-o", "dist-occ"
-    Dir.mkdir("#{bin}")
-    cp("dist-occ", "#{bin}/dist-occ")
+    bin.install("dist-occ")
   end
 
   test do

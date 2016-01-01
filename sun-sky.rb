@@ -7,8 +7,7 @@ class SunSky < Formula
 
   def install
     system "c++", "SunSky.cpp", "SunSkyTest.cpp", "-o", "sun-sky" # if this fails, try separate make/make install steps
-    Dir.mkdir("#{bin}")
-    cp("sun-sky", "#{bin}/sun-sky")
+    bin.install("sun-sky")
   end
 
   test do
