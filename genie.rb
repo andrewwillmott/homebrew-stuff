@@ -3,7 +3,7 @@ class Genie < Formula
   homepage "https://github.com/bkaradzic/genie"
   url "https://github.com/bkaradzic/genie/archive/97d06541aef5b798b76fbd19230c8c64f05aa187.tar.gz"
   version "703"
-  sha256 "1c38a9399d16417358846a54742d2f39a3f2d5616435cfbe2a6d2e4862159b2d"
+  sha256 "82a41a6a24190b6b0a9042136ae96ac468a6d148e38931cdd5a172bbd046e376"
 
   def install
     system "make"
