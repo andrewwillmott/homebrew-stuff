@@ -3,7 +3,7 @@ class Ev < Formula
   homepage "https://github.com/andrewwillmott/ev"
   url "https://github.com/andrewwillmott/ev/archive/dbe8d439bbcc6953407b10e2f2dfe9d76af96506.tar.gz"
   version "2"
-  sha256 "576ce34d42a500ebd65263ec91fc739a999111ea85b5036ae7fc77d48da4c281"
+  sha256 "0bcb1fe518affe50b96cf59b2c607294110c247d925d9191bc45764a918a5072"
  
   def install
     system "c++", "CLExpr.cpp", "EV.cpp", "-o", "ev"
