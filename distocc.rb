@@ -1,17 +1,17 @@
-class DistOcc < Formula
-  desc "Tool for generating distance and approximate AO"
+class Distocc < Formula
+  desc "Tool for generating (signed) distance and approximate AO fields"
   homepage "https://github.com/andrewwillmott/distance-occlusion"
   url "https://github.com/andrewwillmott/distance-occlusion/archive/master.tar.gz"
-  version "1"
-  sha256 "939985926abd6b70eeacbd414912b8ae5631eb30a12f473f86e725bf76d85ac1"
+  version "2"
+  sha256 "491456470cc22f439704e278bf024f3e3f9fbaa3809548e1a0c949295401904a"
 
   def install
-    system "c++", "-D", "USE_TGA=1", "-D", "USE_OBJ=1", "DistanceOcclusionLib.cpp", "DistanceOcclusionTest.cpp", "MeshSupport.cpp", "targa.c", "-o", "dist-occ"
-    bin.install("dist-occ")
+    system "c++", "-std=c++11", "-O3", "-DNDEBUG", "DistanceOcclusionLib.cpp", "DistanceOcclusionTool.cpp", "-o", "distocc"
+    bin.install("distocc")
   end
 
   test do
-    system "dist-occ", "-d", "-x"
-    system "open", "dist.tga"
+    system "distocc", "-s"
+    system "open", "signed-distances.png"
   end
 end
