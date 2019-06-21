@@ -1,9 +1,14 @@
 class Genie < Formula
   desc "GENie, "
+
+  # To update: go to https://github.com/bkaradzic/GENie, scroll down to
+  # "Download(stable)", update version below accordingly, and update the commit
+  # ID before .tar.gz in the URL
+
   homepage "https://github.com/bkaradzic/genie"
-  url "https://github.com/bkaradzic/genie/archive/97d06541aef5b798b76fbd19230c8c64f05aa187.tar.gz"
-  version "703"
-  sha256 "82a41a6a24190b6b0a9042136ae96ac468a6d148e38931cdd5a172bbd046e376"
+  url "https://github.com/bkaradzic/genie/archive/75f665a4092172b075c3599c20a532510a1bdf1d.tar.gz"
+  version "1065"
+  sha256 "a8c96cb1985c62f5664a3ef8294eb5dd1886611581edd4ec58d99509a6080e58"
 
   def install
     system "make"
