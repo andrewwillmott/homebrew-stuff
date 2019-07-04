@@ -1,5 +1,8 @@
 Various "formula" for http://brew.sh.
 
-To use:
+Use as follows:
 
     brew install andrewwillmott/stuff/genie
+    brew install andrewwillmott/stuff/ev
+    brew install andrewwillmott/stuff/sun-sky
+    etc.
